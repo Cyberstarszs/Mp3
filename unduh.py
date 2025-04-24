@@ -11,7 +11,6 @@ from rich.live import Live
 
 console = Console()
 
-# ========== Fungsi Utilitas ==========
 def is_youtube(url):
     return any(domain in url for domain in ["youtube.com", "youtu.be"])
 
@@ -32,7 +31,6 @@ def get_safe_filename(filename, download_path):
         counter += 1
     return f"{base}({counter}){ext}" if counter > 1 else filename
 
-# ========== Animasi & Tampilan ==========
 def futuristic_animation():
     colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEEAD"]
     text = Text("🔥 FUTURISTIC MP3 DOWNLOADER 🔥", style="bold", justify="center")
@@ -45,7 +43,6 @@ def futuristic_animation():
             time.sleep(0.08)
     console.clear()
 
-# ========== Download Logic ==========
 def get_best_audio(url, download_path):
     ffmpeg_path = r'D:\cyber\ffmpeg-2025-04-21-git-9e1162bdf1-full_build\bin'
     
@@ -102,7 +99,6 @@ def download_mp3(url, download_path):
         console.print(f"[bold red]ERROR:[/bold red] {str(e)}")
         return None
 
-# ========== Main Program ==========
 def main():
     download_path = "D:\\HQ_MP3_Downloads"
     os.makedirs(download_path, exist_ok=True)
