@@ -6,5 +6,5 @@ Aplikasi CLI untuk download MP3 dari YouTube atau URL langsung dengan kualitas t
 ## Instalasi
 ```powershell
 git clone https://github.com/Cyberstarszs/mp3-downloader.git
-cd mp3-downloader
+cd mp3
 pip install -r requirements.txt
